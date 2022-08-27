@@ -1,4 +1,4 @@
-#Importing os to locate budget_data.csv and Analysis_output.txt. Csv reads csv filesS
+#Importing os to locate budget_data.csv and Analysis_output.txt. Csv reads csv files
 import os
 import csv
 
@@ -22,15 +22,15 @@ with open(budget_data_csv, 'r') as csvfile:
         #Counts months, objective 1
         month_count += 1
 
-        #counts and calculates the total of the profits and losses, objective 2
+        #counts and calculates the total of the profits and losses
         profit_and_loss = float(row[1])
         budget_total = budget_total + profit_and_loss
         
-        #find the change in profits from previous entry to current entry, adds that to a list of changes in profit objective 3
+        #find the change in profits from previous entry to current entry, adds that to a list of changes in profit
         change_in_profit_and_loss = profit_and_loss - pre_profloss
         changes = changes + [change_in_profit_and_loss]
 
-        #from the change in profit and loss it looks for the biggest and smallest then takes thier dates, objective 4 & 5
+        #from the change in profit and loss it looks for the biggest and smallest then takes thier dates
         if change_in_profit_and_loss > 0 and change_in_profit_and_loss>biggest_change:
             biggest_change = change_in_profit_and_loss
             prof_date = str(row[0])
@@ -41,7 +41,7 @@ with open(budget_data_csv, 'r') as csvfile:
         #makes the current profit_and_loss into previous profit and loss for next interation through the .csv
         pre_profloss = profit_and_loss
     
-    #find the average change in profit and loss, objective 3
+    #find the average change in profit and loss
     average_change = round(sum(changes)/len(changes),2)
 
 #load output path

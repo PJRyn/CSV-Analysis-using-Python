@@ -46,14 +46,14 @@ output_path = os.path.join("Analysis", "Analysis_output.txt")
 
 #outputs the analysis
 with open(output_path, 'w') as text:
-    text.write("Election Results")
-    text.write(f"\n-------------------------")
-    text.write(f"\nTotal Votes: {vote_count_total}")
-    text.write(f"\n-------------------------")
-    text.write(f"\nCharles Casper Stockham: {ccs_vote_percent}% ({ccs_vote_count})")
-    text.write(f"\nDiana DeGette: {dd_vote_percent}% ({dd_vote_count})")
-    text.write(f"\nRaymon Anthony Doane: {rad_vote_percent}% ({rad_vote_count})")
-    text.write(f"\n-------------------------")
-    text.write(f"\nWinner: {max(candidate_and_votes)}")
-    text.write(f"\n-------------------------")
+    text.writelines(["Election Results",
+                    f"\n-------------------------",
+                    f"\nTotal Votes: {vote_count_total}",
+                    f"\n-------------------------",
+                    f"\nCharles Casper Stockham: {ccs_vote_percent}% ({ccs_vote_count})",
+                    f"\nDiana DeGette: {dd_vote_percent}% ({dd_vote_count})",
+                    f"\nRaymon Anthony Doane: {rad_vote_percent}% ({rad_vote_count})",
+                    f"\n-------------------------",
+                    f"\nWinner: {max(candidate_and_votes)}",
+                    f"\n-------------------------"])
 

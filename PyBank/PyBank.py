@@ -49,10 +49,10 @@ output_path = os.path.join("Analysis", "Analysis_output.txt")
 
 #outputs the analysis
 with open(output_path, 'w') as text:
-    text.writelines('Financial Analysis')
-    text.writelines(f'\n----------------------------')
-    text.writelines(f'\nTotal Months: {str(month_count)}')
-    text.writelines(f'\nTotal: ${str(int(budget_total))}')
-    text.writelines(f'\nAverage Change: ${str(average_change)}')
-    text.writelines(f'\nGreatest Increase in Profits: {prof_date} (${str(int(biggest_change))})')
-    text.writelines(f'\nGreatest Decrease in Profits: {loss_date} (${str(int(biggest_loss))})')
+    text.writelines(['Financial Analysis'
+                    f'\n----------------------------'
+                    f'\nTotal Months: {str(month_count)}'
+                    f'\nTotal: ${str(int(budget_total))}'
+                    f'\nAverage Change: ${str(average_change)}'
+                    f'\nGreatest Increase in Profits: {prof_date} (${str(int(biggest_change))})'
+                    f'\nGreatest Decrease in Profits: {loss_date} (${str(int(biggest_loss))})'])

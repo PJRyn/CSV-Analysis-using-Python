@@ -1,4 +1,4 @@
-# CSV Analysis
+# CSV Analysis using Python
 ## About the Project
 This project's goal was to use Python to provide data analysis on two CSV files, the first being PyBank where the goal was to output a text file including: 
 - The total number of months included in the dataset
